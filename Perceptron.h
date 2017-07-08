@@ -1,3 +1,6 @@
-Class Perceptron{
+class Perceptron{
+public:
+  
+protected:
   
 }
