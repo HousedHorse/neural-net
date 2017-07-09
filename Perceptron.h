@@ -6,6 +6,6 @@ public:
   int process(int* input);
 protected:
   int activation();
-}
+};
 
 #endif
