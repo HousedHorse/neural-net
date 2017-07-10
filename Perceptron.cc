@@ -5,7 +5,11 @@ Perceptron::Perceptron(){
   
 };
 
-Perceptron::process(int* input){
+Perceptron::process(vector<int>* input){
+  vector::iterator inputItr = input->begin();
+  vector::iterator weightItr = weight->begin();
+  
+  
 }
 
 Perceptron::activation(){

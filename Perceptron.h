@@ -6,10 +6,10 @@
 class Perceptron{
 public:
   Perceptron();
-  int process(int* input);
+  int process(vector<int>* input);
 protected:
   int activation();
-  int* weight;
+  vector<int>* weight;
 };
 
 #endif
