@@ -8,3 +8,6 @@ main.o: main.cc defs.h
 	
 Perceptron.o: Perceptron.cc Perceptron.h
 	g++ -c Perceptron.cc
+	
+Point.o: Point.cc Point.h
+	g++ -c Point.cc

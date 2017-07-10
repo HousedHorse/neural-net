@@ -2,6 +2,7 @@
 #define PERCEPTRON_H
 
 #include "defs.h"
+#include "Point.h"
 
 class Perceptron{
 public:

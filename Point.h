@@ -6,9 +6,12 @@
 class Point{
 public:
   Point();
-  getData();
+  int* getData();
+  int push(int n);
+  int pop();
 protected:
-  
+  int* data;
+  int size;
 };
 
 #endif
