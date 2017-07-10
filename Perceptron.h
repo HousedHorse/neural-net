@@ -7,7 +7,7 @@
 class Perceptron{
 public:
   Perceptron();
-  int process(vector<int>* input);
+  int process(Point* input);
 protected:
   int activation();
   vector<int>* weight;
