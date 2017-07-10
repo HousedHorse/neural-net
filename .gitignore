@@ -1,1 +1,4 @@
 *.o
+neural-net
+neural-net.exe
+*.stackdump
