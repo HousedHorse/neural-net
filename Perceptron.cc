@@ -5,11 +5,7 @@ Perceptron::Perceptron(){
   
 };
 
-Perceptron::process(vector<int>* input){
-  vector::iterator inputItr = input->begin();
-  vector::iterator weightItr = weight->begin();
-  
-  
+Perceptron::process(Point* input){
 }
 
 Perceptron::activation(){
