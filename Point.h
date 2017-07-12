@@ -6,13 +6,16 @@
 class Point{
 public:
   Point();
-  int* getData();
+  double* getData();
   int  getSize();
-  int  push(int n);
-  int  pop();
+  double  push(double n);
+  double  pop();
 protected:
-  int* data;
+  double* data;
   int size;
+private:
+  void expandData();
+  int max;
 };
 
 #endif

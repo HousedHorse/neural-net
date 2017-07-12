@@ -10,7 +10,8 @@ public:
   int process(Point* input);
 protected:
   int activation();
-  vector<int>* weight;
+  int sign(double n);
+  double* weight;
 };
 
 #endif
