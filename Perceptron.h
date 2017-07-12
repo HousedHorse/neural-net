@@ -9,8 +9,7 @@ public:
   Perceptron();
   int process(Point* input);
 protected:
-  int activation();
-  int sign(double n);
+  int activation(double n);
   double* weight;
 };
 

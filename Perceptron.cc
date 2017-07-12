@@ -8,10 +8,6 @@ Perceptron::Perceptron(){
 int Perceptron::process(Point* input){
 }
 
-int Perceptron::activation(){
+int Perceptron::activation(double n){
   
-}
-
-int Perceptron::sign(double n){
-  //if 
 }
