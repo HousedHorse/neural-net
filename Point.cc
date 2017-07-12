@@ -1,15 +1,17 @@
 #include "Point.h"
 
 Point::Point(){
-  *data = NULL;
-   size = 0;
+  size = 0;
 }
 
-Point::getData(){ return data; }
+int* Point::getData(){ return data; }
 
-Point::push(int n){ *data = n; data++; size++; *data = NULL; return n; }
+int Point::getSize(){ return size; }
 
-Point::pop(){
-  int n = data[--size];
+int Point::push(int n){data[size] = n; size++; return n; }
+
+int Point::pop(){
+  size--;
+  int n = data[size];
   return n;
 }

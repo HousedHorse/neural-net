@@ -1,4 +1,4 @@
-OBJ = main.o Perceptron.o
+OBJ = main.o Perceptron.o Point.o
 
 neural-net: $(OBJ)
 	g++ -o neural-net $(OBJ)

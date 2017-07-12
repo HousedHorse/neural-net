@@ -5,9 +5,9 @@ Perceptron::Perceptron(){
   
 };
 
-Perceptron::process(Point* input){
+int Perceptron::process(Point* input){
 }
 
-Perceptron::activation(){
+int Perceptron::activation(){
   
 }
