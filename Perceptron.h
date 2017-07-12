@@ -7,10 +7,13 @@
 class Perceptron{
 public:
   Perceptron();
-  int process(Point* input);
+  Perceptron(int n);
+  int processAllPoints();
+  int process(const Point& point);
 protected:
+  static int numInputs;
   int activation(double n);
-  double* weight;
+  DynamicArray<double> weights;
 };
 
 #endif

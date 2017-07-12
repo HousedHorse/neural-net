@@ -1,11 +1,14 @@
 #include "Perceptron.h"
 
 //constructor
-Perceptron::Perceptron(){
-  
-};
+Perceptron::Perceptron(){};
 
-int Perceptron::process(Point* input){
+int Perceptron::processAllPoints(){
+}
+
+int Perceptron::process(const Point& point){
+  double sum = 0;
+  
 }
 
 int Perceptron::activation(double n){

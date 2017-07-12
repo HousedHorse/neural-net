@@ -6,16 +6,15 @@
 class Point{
 public:
   Point();
-  double* getData();
+  //test purposes
+  Point(const char*);
+  DynamicArray<double> getData();
   int  getSize();
   double  push(double n);
   double  pop();
 protected:
-  double* data;
-  int size;
-private:
-  void expandData();
-  int max;
+  DynamicArray<double> data;
+  void initRandomly();
 };
 
 #endif
