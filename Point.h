@@ -17,6 +17,7 @@ public:
 protected:
   void initRandomly();
   DynamicArray<double> data;
+  int trainingCategory;
   static unsigned long int nextId;
   unsigned long int id;
 };

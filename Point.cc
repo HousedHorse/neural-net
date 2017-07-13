@@ -5,9 +5,15 @@ unsigned long int Point::nextId = 1001;
 Point::Point() : id(nextId++){
 }
 
-//test purposes
+//test purposes, modify later
 Point::Point(const char* s) : id(nextId++){
   initRandomly();
+  //simple training for testing purposes, delete later
+  if(data[0] >= data[1]){
+    trainingCategory = 1;
+  }else{
+    trainingCategory = -1;
+  }
 }
 
 DynamicArray<double> Point::getData(){ return data; }
