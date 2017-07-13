@@ -37,9 +37,7 @@ T DynamicArray<T>::pop(){
 
 template <class T>
 void DynamicArray<T>::purge(){
-  for(int i = 0; i < data.size(); i++){
-    pop();
-  }
+  data.clear();
 }
 
 template <class T>

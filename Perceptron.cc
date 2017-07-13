@@ -13,9 +13,14 @@ Perceptron::Perceptron() :id(nextId++){
 unsigned long int Perceptron::getId(){ return id; }
 
 void Perceptron::processAllPoints(DynamicArray<Point> points){
+  //delete this just for testing
+  int numCorrect = 0;
   for(int i = 0; i < points.getSize(); i++){
-    cout << "Point #" << points[i].getId() << " final guess: " << process(points[i]) << endl;
+    if(points[i].getTrainingCategory() == process(points[i]))
+      numCorrect++;
   }
+  //delete this just for testing
+  cout << "We got " << numCorrect << " many correct out of " << points.getSize() << endl;
 }
 
 int Perceptron::train(DynamicArray<Point> points){
