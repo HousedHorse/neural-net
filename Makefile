@@ -6,8 +6,8 @@ neural-net: $(OBJ)
 main.o: main.cc defs.h DynamicArray.h
 	g++ -c main.cc
 	
-Perceptron.o: Perceptron.cc Perceptron.h DynamicArray.h
+Perceptron.o: Perceptron.cc Perceptron.h DynamicArray.h defs.h
 	g++ -c Perceptron.cc
 	
-Point.o: Point.cc Point.h DynamicArray.h
+Point.o: Point.cc Point.h DynamicArray.h defs.h
 	g++ -c Point.cc
