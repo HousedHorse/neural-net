@@ -1,12 +1,16 @@
 #include "Perceptron.h"
 
+unsigned long int Perceptron::nextId = 1001;
+
 //constructor
-Perceptron::Perceptron(){
+Perceptron::Perceptron() :id(nextId++){
   //set weights
   for(int i = 0; i < NUM_INPUTS + 1; i++){
     weights.push(rand() % 2000000 / 1000000.0 - 1);
   }
 };
+
+unsigned long int Perceptron::getId(){ return id; }
 
 int Perceptron::processAllPoints(){
 }

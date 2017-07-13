@@ -15,10 +15,10 @@ public:
   double  push(double n);
   double  pop();
 protected:
+  void initRandomly();
+  DynamicArray<double> data;
   static unsigned long int nextId;
   unsigned long int id;
-  DynamicArray<double> data;
-  void initRandomly();
 };
 
 #endif

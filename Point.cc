@@ -6,7 +6,7 @@ Point::Point() : id(nextId++){
 }
 
 //test purposes
-Point::Point(const char* s){
+Point::Point(const char* s) : id(nextId++){
   initRandomly();
 }
 
@@ -28,4 +28,5 @@ void Point::initRandomly(){
   for(int i = 0; i < NUM_INPUTS; i++){
     cout << "Pushing " << data.push((rand() % 20000) / 100.0) << " as a data point" << endl;
   }
+  cout << endl;
 }
