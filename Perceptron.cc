@@ -12,7 +12,11 @@ Perceptron::Perceptron() :id(nextId++){
 
 unsigned long int Perceptron::getId(){ return id; }
 
-int Perceptron::processAllPoints(){
+void Perceptron::processAllPoints(Point* points){
+}
+
+void Perceptron::train(Point* points){
+  //for()
 }
 
 int Perceptron::process(Point& point){

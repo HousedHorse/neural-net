@@ -10,8 +10,9 @@ public:
   Perceptron();
   Perceptron(int n);
   unsigned long int  getId();
-  int processAllPoints();
   int process(Point& point);
+  void train(Point* points);
+  void processAllPoints(Point* points);
 protected:
   int activation(double n);
   DynamicArray<double> weights;
