@@ -10,6 +10,7 @@ public:
   T push(T n);
   T pop();
   int getSize();
+  void purge();
   T& operator[](const int index);
 private:
   std::vector<T> data;
@@ -32,6 +33,13 @@ T DynamicArray<T>::pop(){
   data.pop_back();
   //return the stored value
   return n;
+}
+
+template <class T>
+void DynamicArray<T>::purge(){
+  for(int i = 0; i < data.size(); i++){
+    pop();
+  }
 }
 
 template <class T>
