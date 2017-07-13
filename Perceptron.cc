@@ -5,9 +5,11 @@ unsigned long int Perceptron::nextId = 1001;
 //constructor
 Perceptron::Perceptron() :id(nextId++){
   //set weights
-  for(int i = 0; i < NUM_INPUTS + 1; i++){
+  for(int i = 0; i < NUM_INPUTS; i++){
     weights.push(rand() % 2000000 / 1000000.0 - 1);
   }
+  //set bias weight to 1
+  weights.push(1);
 };
 
 unsigned long int Perceptron::getId(){ return id; }

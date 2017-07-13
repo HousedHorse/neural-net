@@ -38,7 +38,7 @@ int main(int argc, char* argv[]){
   while(1){
     points.purge();
     
-    for(int i = 0; i < 1000; i++){
+    for(int i = 0; i < 10000; i++){
       points.push(Point("random"));
     }
     
