@@ -1,6 +1,8 @@
 #include "Point.h"
 
-Point::Point(){
+unsigned long int Point::nextId = 1001;
+
+Point::Point() : id(nextId++){
 }
 
 //test purposes
@@ -12,6 +14,8 @@ DynamicArray<double> Point::getData(){ return data; }
 
 int Point::getSize(){ return data.getSize(); }
 
+unsigned long int Point::getId(){ return id; }
+
 double Point::push(double n){
   return data.push(n);
 }
@@ -22,6 +26,6 @@ double Point::pop(){
 
 void Point::initRandomly(){
   for(int i = 0; i < NUM_INPUTS; i++){
-    data.push((rand() % 20000) / 100.0);
+    cout << "Pushing " << data.push((rand() % 20000) / 100.0) << " as a data point" << endl;
   }
 }

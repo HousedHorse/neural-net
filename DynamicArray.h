@@ -2,8 +2,7 @@
 #define DYNAMIC_ARRAY_H
 
 #include <vector>
-#include <stdexcept>
-#include <iostream>
+#include "defs.h"
 
 template <class T>
 class DynamicArray{

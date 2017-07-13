@@ -5,6 +5,7 @@
 #define NUM_INPUTS 2
 
 #include <iostream>
+#include <stdexcept>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
