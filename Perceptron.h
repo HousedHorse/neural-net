@@ -10,7 +10,7 @@ public:
   Perceptron();
   Perceptron(int n);
   int processAllPoints();
-  int process(const Point& point);
+  int process(Point& point);
 protected:
   int activation(double n);
   DynamicArray<double> weights;

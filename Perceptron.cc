@@ -1,14 +1,26 @@
 #include "Perceptron.h"
 
 //constructor
-Perceptron::Perceptron(){};
+Perceptron::Perceptron(){
+  //set weights
+  for(int i = 0; i < NUM_INPUTS + 1; i++){
+    weights.push(rand() % 2000000 / 1000000.0 - 1);
+  }
+};
 
 int Perceptron::processAllPoints(){
 }
 
-int Perceptron::process(const Point& point){
+int Perceptron::process(Point& point){
   double sum = 0;
-  
+  //weighted sum of each data member of the point
+  for(int i = 0; i < point.getSize(); i++){
+    sum += weights[i] * point.getData()[i];
+  }
+  //add the bias
+  sum += weights[point.getSize()];
+  //return output of activation function on the sum
+  return activation(sum);
 }
 
 int Perceptron::activation(double n){
