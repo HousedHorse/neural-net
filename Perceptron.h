@@ -3,6 +3,7 @@
 
 #include "defs.h"
 #include "Point.h"
+#include "DynamicArray.h"
 
 class Perceptron{
 public:
@@ -11,7 +12,6 @@ public:
   int processAllPoints();
   int process(const Point& point);
 protected:
-  static int numInputs;
   int activation(double n);
   DynamicArray<double> weights;
 };

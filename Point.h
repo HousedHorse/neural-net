@@ -2,6 +2,7 @@
 #define POINT_H
 
 #include "defs.h"
+#include "DynamicArray.h"
 
 class Point{
 public:

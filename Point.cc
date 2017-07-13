@@ -22,6 +22,6 @@ double Point::pop(){
 
 void Point::initRandomly(){
   for(int i = 0; i < NUM_INPUTS; i++){
-    data.push(random()%100+1);
+    data.push(rand()%100+1);
   }
 }

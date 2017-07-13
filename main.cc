@@ -13,8 +13,14 @@ int main(int argc, char* argv[]){
     p[i] = Point("random");
   }
   
+  cout << p[0].getData()[0] << endl;
+  cout << p[0].getData()[1] << endl;
   cout << p[1].getData()[0] << endl;
   cout << p[1].getData()[1] << endl;
+  cout << p[2].getData()[0] << endl;
+  cout << p[2].getData()[1] << endl;
+  cout << p[3].getData()[0] << endl;
+  cout << p[3].getData()[1] << endl;
   
   // cout << "Pushed:" << p->push(251.0) << endl;
   // cout << "Size: " << p->getSize() << endl;
