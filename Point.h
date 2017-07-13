@@ -11,6 +11,7 @@ public:
   Point(const char*);
   DynamicArray<double> getData();
   int  getSize();
+  int getTrainingCategory();
   unsigned long int  getId();
   double  push(double n);
   double  pop();

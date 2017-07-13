@@ -15,7 +15,20 @@ int main(int argc, char* argv[]){
   }
   
   for(int i = 0; i < points.getSize(); i++){
-    cout << points[i].getId() << endl;
+    cout << "Point #" << points[i].getId() << " has expected value of "
+      << points[i].getTrainingCategory() << endl;
   }
- 
+  
+  int generations = 1;
+  
+  while(1){
+    if(perc.train(points)){
+      cout << endl << "TOOK " << generations << " MANY GENERATIONS" << endl;
+      break;
+    }
+    generations++;
+  }
+  
+  cout << "FINAL OUTPUT" << endl;
+  perc.processAllPoints(points);
 }

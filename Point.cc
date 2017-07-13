@@ -20,6 +20,8 @@ DynamicArray<double> Point::getData(){ return data; }
 
 int Point::getSize(){ return data.getSize(); }
 
+int Point::getTrainingCategory(){ return trainingCategory; }
+
 unsigned long int Point::getId(){ return id; }
 
 double Point::push(double n){
@@ -32,7 +34,8 @@ double Point::pop(){
 
 void Point::initRandomly(){
   for(int i = 0; i < NUM_INPUTS; i++){
-    cout << "Pushing " << data.push((rand() % 20000) / 100.0) << " as a data point" << endl;
+    cout << "Pushing " << data.push((rand() % 20000) / 100.0)
+      << " as input #" << i << " to point #" << id << endl;
   }
   cout << endl;
 }

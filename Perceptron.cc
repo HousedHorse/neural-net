@@ -12,11 +12,33 @@ Perceptron::Perceptron() :id(nextId++){
 
 unsigned long int Perceptron::getId(){ return id; }
 
-void Perceptron::processAllPoints(Point* points){
+void Perceptron::processAllPoints(DynamicArray<Point> points){
+  for(int i = 0; i < points.getSize(); i++){
+    cout << "Point #" << points[i].getId() << " final guess: " << process(points[i]) << endl;
+  }
 }
 
-void Perceptron::train(Point* points){
-  //for()
+int Perceptron::train(DynamicArray<Point> points){
+  //temporary system to judge correctness
+  int correct = 1;
+  for(int i = 0; i < points.getSize(); i++){
+    //defintions
+    float tr = TRAINING_RATE;
+    int guess = process(points[i]);
+    int target = points[i].getTrainingCategory();
+    //calculate the error
+    int error = target - guess;
+    //use error and training rate to calculate change in weighted
+    for(int j = 0; j < points[i].getData().getSize(); j++){
+      //new weight is old weight + error * input * training rate
+      weights[j] += (error * points[i].getData()[j] * tr);
+    }
+    //temporary system to judge correctness
+    if(error){
+      correct = 0;
+    }
+  }
+  return correct;
 }
 
 int Perceptron::process(Point& point){
