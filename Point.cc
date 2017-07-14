@@ -9,7 +9,7 @@ Point::Point() : id(nextId++){
 Point::Point(const char* s) : id(nextId++){
   initRandomly();
   //simple training for testing purposes, delete later
-  if(data[0] >= data[1]){
+  if(data[0] >= 3 * data[1] + 24){
     trainingCategory = 1;
   }else{
     trainingCategory = -1;

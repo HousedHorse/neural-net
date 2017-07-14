@@ -42,6 +42,9 @@ int Perceptron::train(DynamicArray<Point> points){
     }
     //temporary system to judge correctness
     if(error){
+      // cout << "Point #" << points[i].getId() << " with data " << points[i].getData()[0]
+      //   << ", " << points[i].getData()[0] << " was guessed incorrectly with an"
+      //   << " error of " << error << endl;
       correct = 0;
     }
   }

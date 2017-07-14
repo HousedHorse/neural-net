@@ -2,7 +2,7 @@
 #define DEFS_F
 
 #define NUM_INPUTS 2
-#define TRAINING_RATE 0.1
+#define TRAINING_RATE 0.01
 
 #include <iostream>
 #include <stdexcept>
