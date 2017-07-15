@@ -10,12 +10,12 @@ public:
   Perceptron();
   Perceptron(int n);
   unsigned long int  getId();
-  int process(Point& point);
-  int train(DynamicArray<Point> points);
+  double process(Point& point);
+  void train(DynamicArray<Point> points, int maxGen);
   void processAllPoints(DynamicArray<Point> points);
 protected:
-  int activation(double n);
   DynamicArray<double> weights;
+  double activation(double n);
   static unsigned long int nextId;
   unsigned long int id;
 };

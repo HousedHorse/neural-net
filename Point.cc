@@ -2,18 +2,24 @@
 
 unsigned long int Point::nextId = 1001;
 
-Point::Point() : id(nextId++){
-}
-
-//test purposes, modify later
-Point::Point(const char* s) : id(nextId++){
-  initRandomly();
-  //simple training for testing purposes, delete later
-  if(data[0] >= 3 * data[1] + 24){
+Point::Point(int lower, int upper, bool random) : id(nextId++){
+  double x;
+  double y;
+  if(random){
+    x = rand() % (upper * 1000 ) / 1000.0 + lower;
+    y = rand() % (upper * 1000 ) / 1000.0 + lower;
+  }else{
+    x = lower;
+    y = upper;
+  }
+  data.push(x);
+  data.push(y);
+  if(data[0] <= data[1] + 10){
     trainingCategory = 1;
   }else{
     trainingCategory = -1;
   }
+  data.push(1);
 }
 
 DynamicArray<double> Point::getData(){ return data; }
@@ -30,12 +36,4 @@ double Point::push(double n){
 
 double Point::pop(){
   return data.pop();
-}
-
-void Point::initRandomly(){
-  for(int i = 0; i < NUM_INPUTS; i++){
-    cout << "Pushing " << data.push((rand() % 20000) / 100.0)
-      << " as input #" << i << " to point #" << id << endl;
-  }
-  cout << endl;
 }

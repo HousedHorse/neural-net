@@ -10,28 +10,14 @@ int main(int argc, char* argv[]){
   Perceptron perc = Perceptron();
   DynamicArray<Point> points;
   
-  for(int i = 0; i < 1000; i++){
-    points.push(Point("random"));
+  for(int i = 0; i < 2000; i++){
+    points.push(Point(5,600,1));
   }
   
-  for(int i = 0; i < points.getSize(); i++){
-    cout << "Point #" << points[i].getId() << " has expected value of "
-      << points[i].getTrainingCategory() << endl;
-  }
-  
-  int generations = 1;
-  
-  while(1){
-    cout << "GENERATION " << generations << endl;
-    if(perc.train(points)){
-      break;
-    }
-    generations++;
-  }
+  perc.train(points, 100000000);
   
   cout << endl << "FINAL OUTPUT" << endl;
   perc.processAllPoints(points);
-  cout << "TOOK " << generations << " MANY GENERATIONS" << endl;
   
   cout << "Training complete. Press ENTER to continue...";
   cin.get();
@@ -39,8 +25,8 @@ int main(int argc, char* argv[]){
   while(1){
     points.purge();
     
-    for(int i = 0; i < 10000; i++){
-      points.push(Point("random"));
+    for(int i = 0; i < 100000; i++){
+      points.push(Point(5,600,1));
     }
     
     perc.processAllPoints(points);

@@ -6,9 +6,8 @@
 
 class Point{
 public:
-  Point();
   //test purposes
-  Point(const char*);
+  Point(int, int, bool);
   DynamicArray<double> getData();
   int  getSize();
   int getTrainingCategory();
@@ -16,7 +15,6 @@ public:
   double  push(double n);
   double  pop();
 protected:
-  void initRandomly();
   DynamicArray<double> data;
   int trainingCategory;
   static unsigned long int nextId;
